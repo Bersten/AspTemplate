@@ -1,0 +1,26 @@
+@model IEnumerable<Exercice.Models.User>
+
+<h1>Résultats de la Recherche</h1>
+
+<form asp-action="Search" method="get">
+    <input type="text" name="keyword" placeholder="Rechercher un mot-clé" />
+    <button type="submit">Rechercher</button>
+</form>
+
+<table>
+    <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Biographie</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.Name</td>
+                <td>@user.UserProfile?.Biography</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,16 @@
+@model Exercice.Models.Category
+
+<h1>Détails de la Catégorie</h1>
+
+<p><strong>Nom :</strong> @Model.Name</p>
+
+<h2>Produits associés</h2>
+
+<div class="products-list">
+    @foreach (var product in Model.Products)
+    {
+        @Html.DisplayFor(m => product)
+    }
+</div>
+
+<a href="@Url.Action("Index", "Category")" class="btn btn-primary">Retour</a>

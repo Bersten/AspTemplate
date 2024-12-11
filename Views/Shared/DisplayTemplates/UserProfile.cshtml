@@ -1,0 +1,16 @@
+@model Exercice.Models.UserProfile
+
+<div class="user-profile">
+    <h3>Biographie</h3>
+    <p>@Model.Biography</p>
+
+    <h3>Photo de Profil</h3>
+    @if (!string.IsNullOrEmpty(Model.ProfilePictureUrl))
+    {
+        <img src="@Model.ProfilePictureUrl" alt="Photo de Profil" class="img-thumbnail" />
+    }
+    else
+    {
+        <p>Aucune photo disponible</p>
+    }
+</div>

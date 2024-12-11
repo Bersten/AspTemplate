@@ -1,0 +1,137 @@
+/* Styles globaux pour les tableaux */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+  text-align: left;
+}
+
+/* Bordures légères */
+th, td {
+  border: 1px solid #ddd;
+  padding: 12px 20px;
+}
+
+/* En-tête stylée */
+th {
+  background-color: #f4f4f4;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Lignes alternées */
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Hover pour les lignes */
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Centrer le texte dans certaines colonnes si nécessaire */
+td, th {
+  vertical-align: middle;
+}
+
+/* Style optionnel pour les liens dans les tableaux */
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Styles globaux pour les formulaires */
+form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style pour les champs de formulaire */
+form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="url"],
+form textarea,
+form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="number"]:focus,
+form input[type="url"]:focus,
+form textarea:focus,
+form select:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+/* Style pour les boutons */
+form button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  transition: background-color 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Messages d'erreur */
+.text-danger {
+  color: #d9534f;
+  font-size: 14px;
+}
+
+/* Centrer le formulaire et les éléments */
+form div {
+  margin-bottom: 15px;
+}
+
+form textarea {
+  resize: vertical;
+}
+
+/* Style optionnel pour les titres de formulaire */
+form h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+}

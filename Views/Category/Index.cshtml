@@ -1,0 +1,38 @@
+@model IEnumerable<Exercice.Models.Category>
+
+<h1>Liste des catégories</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var category in Model)
+        {
+            <tr>
+                <td>@category.Name</td>
+                <td>
+                    <a href="@Url.Action("Details", "Category", new { id = category.Id })">Voir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<form class="menu-form"asp-action="CategoriesWithExpensiveProducts" asp-controller="Category" method="get">
+    <label for="priceInput">Choisir un prix pour Rechercher Liste catégories avec un produit plus chère</label>
+    <input type="number" id="priceInput" name="price" required>
+    <button type="submit">Submit</button>
+</form>
+
+<style>
+    .menu-form {
+        @* max-height: 100px; *@
+        display: flex;
+        flex-direction: row;
+        gap:20px;
+    }
+</style>
